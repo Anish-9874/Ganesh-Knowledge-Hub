@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Details - Ganesh Knowledge Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Book Details Section -->
+    <section class="container my-5" id="book-section">
+      <div class="row">
+        <!-- Book Cover -->
+        <div class="col-md-4">
+          <img id="book-img" src="" class="img-fluid" alt="Book Cover">
+        </div>
+
+        <!-- Book Information -->
+        <div class="col-md-8">
+          <h2 id="book-title">Book Title</h2>
+          <p><strong>Author:</strong> <span id="book-author"></span></p>
+          <p><strong>Category:</strong> <span id="book-category"></span></p>
+          <p><strong>Description:</strong> <span id="book-description"></span></p>
+          <a href="login.html" class="btn btn-success mb-3">Borrow Book</a>
+
+          <!-- Rating System -->
+          <h4>Rate this Book:</h4>
+          <div id="rating" class="stars mb-2">★ ★ ★ ★ ★</div>
+          <p id="rating-result">Average Rating: 0 (0 votes)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </div>
+
+  <script>
+    const ratings = [];
+    const starsContainer = document.getElementById('rating');
+    const result = document.getElementById('rating-result');
+
+    // Initialize stars
+    const stars = starsContainer.textContent.trim().split(" ");
+    starsContainer.innerHTML = stars.map((_, i) => `<span data-value="${i + 1}">★</span>`).join(" ");
+
+    // Add click events for rating
+    starsContainer.querySelectorAll("span").forEach(star => {
+      star.addEventListener("click", function () {
+        const value = parseInt(this.getAttribute("data-value"));
+        ratings.push(value);
+
+        // Highlight stars
+        starsContainer.querySelectorAll("span").forEach((s, i) => {
+          s.classList.toggle("selected", i < value);
+        });
+
+        // Calculate average
+        const sum = ratings.reduce((a, b) => a + b, 0);
+        const avg = (sum / ratings.length).toFixed(1);
+        result.textContent = `Average Rating: ${avg} (${ratings.length} votes)`;
+      });
+    });
+
+    // Fetch book data from JSON
+    const params = new URLSearchParams(window.location.search);
+    const bookId = parseInt(params.get('id'));
+
+    fetch('books.json')
+      .then(response => response.json())
+      .then(data => {
+        let allBooks = [];
+        for (const category in data) {
+          allBooks = allBooks.concat(data[category]);
+        }
+
+        const book = allBooks.find(b => b.id === bookId);
+        if (book) {
+          document.getElementById('book-title').textContent = book.title;
+          document.getElementById('book-author').textContent = book.author;
+          document.getElementById('book-category').textContent = book.category;
+          document.getElementById('book-description').textContent = book.description;
+          document.getElementById('book-img').src = book.img;
+          document.getElementById('book-img').alt = book.title;
+        } else {
+          document.getElementById('book-section').innerHTML = '<p>Book not found!</p>';
+        }
+      })
+      .catch(err => console.error('Error fetching JSON:', err));
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

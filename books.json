@@ -1,0 +1,182 @@
+{
+  "fiction": [
+    {
+      "id": 1,
+      "title": "Aak Chihan",
+      "author": "Hridaya Chandra Singh Pradhan",
+      "img": "image/book1.avif",
+      "description": "A compelling fiction story by Hridaya Chandra Singh Pradhan."
+    },
+    {
+      "id": 2,
+      "title": "Jasto Soch Testaii Jiban",
+      "author": "James Allen",
+      "img": "image/book2.avif",
+      "description": "A motivational fiction story by James Allen."
+    },
+    {
+      "id": 3,
+      "title": "China Harayeko Manxe",
+      "author": "Hari Bansha Acharya",
+      "img": "image/book3.jpg",
+      "description": "A humorous fiction story by Hari Bansha Acharya."
+    },
+    {
+      "id": 4,
+      "title": "Ejoriya",
+      "author": "Subin Bhattarai",
+      "img": "image/book4.jpg",
+      "description": "A romantic fiction story by Subin Bhattarai."
+    }
+  ],
+  "nonfiction": [
+    {
+      "id": 5,
+      "title": "Gurkha Brotherhood",
+      "author": "Kailash Limbu",
+      "img": "image/book5.jpg",
+      "description": "True story about Gurkha bravery."
+    },
+    {
+      "id": 6,
+      "title": "It Ends With Us",
+      "author": "Colleen Hoover",
+      "img": "image/book7.avif",
+      "description": "A powerful non-fiction story about love and courage."
+    },
+    {
+      "id": 7,
+      "title": "Jiban Kada Ki Ful",
+      "author": "Jhamak Ghimire",
+      "img": "image/book8.jpg",
+      "description": "Inspirational non-fiction by Jhamak Ghimire."
+    },
+    {
+      "id": 8,
+      "title": "Miracles of Your Mind",
+      "author": "Joseph Murphy",
+      "img": "image/book9.jpg",
+      "description": "Self-help and motivational guide."
+    }
+  ],
+  "novels": [
+    {
+      "id": 9,
+      "title": "Munamadan",
+      "author": "Laxmi Prasad Devkota",
+      "img": "image/book10.avif",
+      "description": "Classic Nepali novel by Laxmi Prasad Devkota."
+    },
+    {
+      "id": 10,
+      "title": "Never Ending Sky",
+      "author": "Jillian Ashford",
+      "img": "image/book11.jpg",
+      "description": "Romantic popular fiction novel."
+    },
+    {
+      "id": 11,
+      "title": "The Art of Being Alone",
+      "author": "Renuka Gavrani",
+      "img": "image/book12.avif",
+      "description": "Self-reflective novel on solitude."
+    },
+    {
+      "id": 12,
+      "title": "The Only Skill That Matters",
+      "author": "Jonathan Levi",
+      "img": "image/book13.jpg",
+      "description": "Popular fiction with life lessons."
+    },
+    {
+      "id": 13,
+      "title": "Harry Potter",
+      "author": "J.K. Rowling",
+      "img": "image/book6.avif",
+      "description": "Famous fantasy novel series."
+    },
+    {
+      "id": 14,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "img": "image/book14.jpg",
+      "description": "Inspirational novel by Paulo Coelho."
+    },
+    {
+      "id": 15,
+      "title": "It",
+      "author": "Stephen King",
+      "img": "image/book15.jpg",
+      "description": "Horror fiction by Stephen King."
+    },
+    {
+      "id": 16,
+      "title": "Pachyderm",
+      "author": "Hugh McGinlay",
+      "img": "image/book16.jpg",
+      "description": "Popular fiction novel."
+    }
+  ],
+  "motivational": [
+    {
+      "id": 17,
+      "title": "Miracle Morning",
+      "author": "Hal Elrod",
+      "img": "image/book17.jpg",
+      "description": "Motivational book to start your day positively."
+    },
+    {
+      "id": 18,
+      "title": "The Power of Habit",
+      "author": "Charles Duhigg",
+      "img": "image/book18.jpg",
+      "description": "Guide to changing habits and routines."
+    }
+  ],
+  "science": [
+    {
+      "id": 19,
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "img": "image/book18.png",
+      "description": "A brief history of humankind."
+    },
+    {
+      "id": 20,
+      "title": "Educated",
+      "author": "Tara Westover",
+      "img": "image/book19.jpg",
+      "description": "Memoir of overcoming adversity."
+    }
+  ],
+  "history": [
+    {
+      "id": 21,
+      "title": "A People's History of the United States",
+      "author": "Howard Zinn",
+      "img": "image/book21.jpg",
+      "description": "History book about US events from a people's perspective."
+    },
+    {
+      "id": 22,
+      "title": "Guns, Germs, and Steel",
+      "author": "Jared Diamond",
+      "img": "image/book22.jpg",
+      "description": "Analysis of civilizations and history."
+    },
+    {
+      "id": 23,
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "img": "image/book23.jpg",
+      "description": "Diary of Anne Frank during WWII."
+    },
+    {
+      "id": 24,
+      "title": "Long Walk to Freedom",
+      "author": "Nelson Mandela",
+      "img": "image/book24.jpg",
+      "description": "Autobiography of Nelson Mandela."
+    }
+  ]
+}

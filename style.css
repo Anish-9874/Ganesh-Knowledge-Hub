@@ -1,0 +1,65 @@
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+  }
+
+  .content {
+    flex: 1; /* takes all available space */
+  }
+
+    .stars {
+      font-size: 32px;
+      color: gray;
+      cursor: pointer;
+      user-select: none;
+    }
+    .stars .selected {
+      color: gold;
+    }
+
+    /* style.css */
+fieldset {
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+legend {
+  width: auto;
+  padding: 0 10px;
+}
+
+
+iframe {
+  width: 100%;
+  min-height: 300px;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
